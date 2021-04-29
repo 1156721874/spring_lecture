@@ -1,0 +1,53 @@
+buildscript {
+    ext {
+        springBootVersion = '2.1.3.RELEASE'
+    }
+    repositories {
+        maven {
+            url 'https://repo.spring.io/release'
+        }
+        mavenCentral()
+    }
+    dependencies {
+        classpath (
+            "org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}",
+            "io.spring.gradle:dependency-management-plugin:1.0.7.RELEASE"
+        )
+    }
+}
+
+apply {
+    plugin("java")
+    plugin("maven")
+    plugin("idea")
+    plugin("org.springframework.boot")
+    plugin("io.spring.dependency-management")
+}
+
+group 'com.twodragonlake'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+sourceCompatibility = 1.8
+
+repositories {
+    maven {
+        url 'https://repo.spring.io/release'
+    }
+    mavenCentral()
+}
+
+dependencies {
+    compile(
+        "org.springframework.boot:spring-boot-starter-web",
+            "org.springframework.boot:spring-boot-loader",
+            "javax.servlet:jstl",
+            "org.apache.tomcat.embed:tomcat-embed-jasper",
+            "org.springframework.boot:spring-boot-starter-websocket:2.1.3.RELEASE",
+            "org.springframework.boot:spring-boot-starter-json",
+            "org.springframework.boot:spring-boot-devtools:2.1.3.RELEASE",
+            "org.springframework.boot:spring-boot-starter-test:2.1.3.RELEASE",
+            "org.springframework.kafka:spring-kafka",
+            "com.google.code.gson:gson:2.8.5"
+    )
+}

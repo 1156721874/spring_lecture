@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<configuration >
+    <include resource="org/springframework/boot/logging/logback/base.xml"/>
+    <logger name="com.twodragonlake.boot" level="DEBUG"/>
+        <springProfile name="default">
+        <logger  name="com.twodragonlake.boot"  level="INFO" />
+    </springProfile>
+</configuration>
+
+

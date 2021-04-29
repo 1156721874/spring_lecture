@@ -1,0 +1,38 @@
+spring:
+  application:
+    name: mytest
+  http:
+    encoding:
+      enabled: true
+      charset: UTF-8
+  mvc:
+    view:
+      prefix: /WEB-INF/jsp/
+      suffix: .jsp
+#  profiles:
+#    active: test
+
+  kafka:
+    producer:
+      bootstrap-servers: localhost:9092
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+    consumer:
+      bootstrap-servers: localhost:9092
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+
+server:
+  port: 9090
+
+myConfig:
+  myObject:
+    myName: zhangsan
+    myAge: 20
+
+
+
+#logging:
+#  level:
+#    root: debug
+#  path: logs/mylog
